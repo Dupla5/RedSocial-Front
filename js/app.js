@@ -1,17 +1,25 @@
 'use strict';
+//Variables
 
-try{
-    async function getUser() {
-        let response = await fetch(`localhost:4000/usuario`);
-        let data = await response.json()
-        return data;
-    }
 
-    const response = getUser();
-    console.log(response);
-}catch(e){
-    console.log('')
+//Event Listeners
+document.addEventListener('DOMContentLoaded', obtenerDatos);
+
+
+//Funciones
+//Conexion al BackEnd
+function obtenerDatos() {
+    fetch("http://localhost:3000/usuario/")
+        .then((respuesta) => { 
+            return respuesta.json() })
+        .then((data) => { console.log(data) })
 }
+
+
+
+
+
+
 
 
 
