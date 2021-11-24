@@ -61,7 +61,12 @@ function registrarUsuario(usuario) {
                 return data.json();
             }
         }
-        ).then((data) => { console.log(data) })
+        ).then((res) => { 
+            if (res.data === "Registro Completado") {
+                alert("Registro completado");
+                window.location.href = "./inicio-sesion.html";
+            }
+        })
 }
 
 

@@ -9,7 +9,7 @@ let btnEnviar = document.querySelector('#enviarFormulario');
 
 //Eventos AddEvenLister
 formulario.addEventListener('submit', (e) => {
-    e.preventDefault();  //Para que nos nos redireccione habilitamos esta linea
+    e.preventDefault(); 
     mandarDatos();
 })
 
@@ -32,10 +32,12 @@ const mandarDatos = () => {
         }
     }
     ).then(res => {
-        if (res.data){
+        if (res.data !== "Datos incorrectos"){
             const idUsuario = res.data[0].id_Usuario;
             localStorage.setItem('idUsuario',idUsuario);
             window.location.href = "./perfil.html";
+        }else{
+            alert("Datos incorrectos");
         }
         
     }).catch((err) => {
