@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <link rel="stylesheet" href="./css/estilos.css" />
 
     <!-- Bootstrap CSS -->
@@ -15,48 +16,59 @@
     />
 
     <!--Hoja de estilos-->
-    
 
     <title>Red social</title>
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand">
-          <img src="./img/tecla.jfif" class="logo" class="d-inline-block align-text-top">
+          <img
+            src="./img/tecla.jfif"
+            class="logo"
+            class="d-inline-block align-text-top"
+          />
           Tecla Coding
         </a>
         <div>
-          <a href="https://www.linkedin.com/" class="button-principal-unirte-ahora">Unirte Ahora</a>
-         <a href="https://www.linkedin.com/" class="button-principal-ini-sesion">Iniciar Sesión</a>
-        </div>    
+          <a href="./registro.html" class="button-principal-unirte-ahora"
+            >Unirte Ahora</a
+          >
+          <a href="./inicio-sesion.html" class="button-principal-ini-sesion"
+            >Iniciar Sesión</a
+          >
+        </div>
       </div>
     </nav>
   </head>
   <body>
-
     <div class="container">
       <div class="row mb-2">
-       <div class="col"><h1>Te damos la bienvenida a tu comunidad profesional</h1>     
-        <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"></label>
-          <input type="email" class="form-control" id="email" placeholder="Email o teléfono" name="email">
+        <div class="col">
+          <h1>Te damos la bienvenida a tu comunidad profesional</h1>
+          <form id="form" method="post">
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email o teléfono"
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="pwd"
+                placeholder="Ingresa Contraseña"
+                name="pwd"
+              />
+            </div>
+            <button type="submit" id="enviarFormulario" class="btn btn-primary">Iniciar Sesión</button>
+          </form>
         </div>
-        <div class="mb-3">
-       <input type="password" class="form-control" id="pwd" placeholder="Ingresa Contraseña" name="pswd">
-
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Aceptar y Unirse</button>
-      </form>
-
-     
+        <div class="col"><img src="./img/imagen-principal.svg" /></div>
+      </div>
     </div>
-    <div class="col"> <img src="./img/imagen-principal.svg"></div>
-  </div>
-       </div>
-
-
- 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
@@ -64,5 +76,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/inicio.js"></script>
   </body>
 </html>
