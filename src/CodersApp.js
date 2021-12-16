@@ -24,6 +24,7 @@ export const CodersApp = () => {
                     una nuevo componente que contiene Feed(si es desde Login) o el Edit Profile(si es desde Register)
                     Por default el nuevo componete debe la barra de navegacion y el lateral izquierdo
                 */}
+                {state ? </>: </>}
 
             </div>
         </>
