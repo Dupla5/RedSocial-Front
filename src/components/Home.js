@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import ReactDom from "react-dom";
+import { ContenidoPrincipal } from "./ContenidoPrincipal";
 import { Inicio } from "./Inicio";
 //import { Axios } from 'axios';
 
 
-const Home = () => {
+export const Home = () => {
 
-  //STATE DE LA APP
+  //State de los inputs
   const [email, setEmail] = useState();
   const [pwd, setPassword] = useState();
 
@@ -21,8 +22,6 @@ const Home = () => {
 
   const Login = (e) => {
     e.preventDefault();
-    console.log(email);
-    console.log(pwd);
     fetch('https://backend-dupla5.herokuapp.com/users/login',
       {
         method: 'POST', // *GET, POST, PUT, DELETE, etc
@@ -39,21 +38,24 @@ const Home = () => {
           return data.json();
         }
       }
-      ).then(({data}) => {
+      ).then(({ data }) => {
         if (data !== "Datos incorrectos") {
           alert('Ha iniciado sesion correctamente');
-          console.log(data);
           const idUsuario = data[0].id_Usuario;
-          console.log(idUsuario);
-          ReactDom.render(<Inicio />,document.getElementById('root'));
-          //localStorage.setItem('idUsuario', idUsuario);
+          localStorage.setItem('idUsuario', idUsuario);
+          ReactDom.render(<Inicio />, document.getElementById('root'));
+
         } else {
           alert("Datos incorrectos");
         }
 
       })
       .catch((err) => { console.log(err) })
-  }
+    }
+
+    const contenidoPrincipal = () => {
+      ReactDom.render(<ContenidoPrincipal />, document.getElementById('root'));
+    }
 
 
   return (
@@ -62,12 +64,12 @@ const Home = () => {
 
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">
-          <a href="#" className="navbar-brand">
+          <a href={() => false} className="navbar-brand">
             Tecla Coding
           </a>
           <div>
-            <a href="https://www.linkedin.com/" className="button-principal-unirte-ahora">Unirte Ahora</a>
-            <a href="https://www.linkedin.com/" className="button-principal-ini-sesion">Iniciar Sesión</a>
+            <a href={() => false} onClick={contenidoPrincipal} className="button-principal-unirte-ahora">Unirte Ahora</a>
+            <a href={() => false} onClick={contenidoPrincipal} className="button-principal-ini-sesion">Iniciar Sesión</a>
           </div>
         </div>
       </nav>
@@ -88,6 +90,9 @@ const Home = () => {
               <button type="submit" className="btn btn-primary">Aceptar y Unirse</button>
             </form>
           </div>
+          <div className="col">
+            <img src="./imagen-principal.svg" />
+            </div>
         </div>
 
       </div>
@@ -95,5 +100,3 @@ const Home = () => {
 
   );
 }
-
-export default Home;

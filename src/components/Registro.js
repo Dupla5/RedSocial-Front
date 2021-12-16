@@ -1,16 +1,16 @@
-import React, {Fragment,useState} from "react";
+import React, {useState} from "react";
 
 
 
-const Registro = () =>{
+export const Registro = () =>{
 
 return (
-  <Fragment>
+  <>
 
 
 <nav class="navbar navbar-dark bg-dark">
 <div class="container-fluid">
-  <a class="navbar-brand my-3 mx-auto">Red Social</a>
+        <a href={() => false} class="navbar-brand my-3 mx-auto">Red Social</a>
 </div>
 </nav>
 
@@ -119,10 +119,9 @@ return (
   </div>
 </div>
 </div>
-  </Fragment>
+  </>
 
 );
 
 }
 
-export default Registro;
