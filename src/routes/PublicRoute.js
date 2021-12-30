@@ -3,6 +3,6 @@ import { Navigate } from "react-router-dom";
 
 export const PublicRoute = ({children}) => {
 
-    const { id } = useSelector(state => state.auth);
-    return id!=null ? <Navigate to={`${id}/feed`} /> : children;
+    const { logged,id } = useSelector(state => state.auth);
+    return logged ? <Navigate to={`${id}/`} /> : children;
 }

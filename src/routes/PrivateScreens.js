@@ -12,11 +12,10 @@ export const PrivateScreens = () => {
             <Menu/>
             <div className="container">
                 <Routes>
-                    <Route path="feed" element={<FeedScreen />} />
+                    <Route path="/" element={<FeedScreen />} />
                     <Route path="profile" element={<ProfileScreen />} />
                     <Route path="editProfile" element={<EditProfileScreen/>} />
                     <Route path="help" element={<HelpFormScreen />} />
-                    <Route path="/*" element={<FeedScreen />} />
                 </Routes>
             </div>
         </>

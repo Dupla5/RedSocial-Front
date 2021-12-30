@@ -25,16 +25,16 @@ export const Menu = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/feed">Feed</Link>
+                            <Link className="nav-link" to="/">Feed</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/profile">Profile</Link>
+                            <Link className="nav-link" to="profile">Profile</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/editProfile">Edit Profile</Link>
+                            <Link className="nav-link" to="editProfile">Edit Profile</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/help">Help</Link>
+                            <Link className="nav-link" to="help">Help</Link>
                         </li>
                         <button className="btn btn-outline-warning" onClick={handleLogout}>Logout</button>
                     </ul>

@@ -12,7 +12,7 @@ export const AppRouter = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path={`/${id}/*`} element={
+                <Route path={`${id}/*`} element={
                     <PrivateRoute>
                         <PrivateScreens />
                     </PrivateRoute>
