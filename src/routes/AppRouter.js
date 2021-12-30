@@ -7,12 +7,12 @@ import { PublicScreens } from "./PublicScreens";
 
 export const AppRouter = () => {
 
-    const {id} = useSelector(state => state.auth)
+    const {Nombre} = useSelector(state => state.data)
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path={`${id}/*`} element={
+                <Route path={`${Nombre}/*`} element={
                     <PrivateRoute>
                         <PrivateScreens />
                     </PrivateRoute>

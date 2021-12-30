@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { startLogout } from "../../actions/auth";
+import { removeData } from "../../actions/data";
 
 
 export const Menu = () => {
@@ -9,6 +10,7 @@ export const Menu = () => {
     const navigate = useNavigate();
 
     const handleLogout = ()=>{
+        dispatch(removeData());
         dispatch(startLogout());
         navigate('/login', {
             replace: true
