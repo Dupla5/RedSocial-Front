@@ -1,14 +1,20 @@
 import Swal from 'sweetalert2';
+import { getIdUser } from '../helpers/getIdUser';
 import { types } from "../types/types";
 import { finishLoading, startLoading } from "./ui";
 
 
 export const startLoginEmailPassword =(email,password) =>{
-    return (dispatch) =>{
+    return async(dispatch) =>{
         dispatch(startLoading());
-        dispatch(login('12345'));
-        dispatch(finishLoading());
-        Swal.fire('Success', 'Bienvenido','success');
+        const id = await getIdUser(email,password);
+        if(id!==undefined){
+            dispatch(login(id));
+            dispatch(finishLoading());
+            Swal.fire('Success', 'Bienvenido','success');
+        }else{
+            Swal.fire('Error', 'Verifique sus datos','warning');
+        }
     }
 };
 
@@ -26,7 +32,7 @@ export const login = (id) => {
             id,
         }
     }
-}
+};
 
 export const logout = ()=>{
     return{
