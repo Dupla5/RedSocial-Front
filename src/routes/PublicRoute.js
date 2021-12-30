@@ -1,9 +1,8 @@
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
+export const PublicRoute = ({children}) => {
 
-export const PublicRoute = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+    const { id } = useSelector(state => state.auth);
+    return id!=null ? <Navigate to={`${id}/feed`} /> : children;
 }

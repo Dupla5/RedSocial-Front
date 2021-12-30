@@ -1,16 +1,13 @@
-import { useReducer } from "react";
-import { AuthContext } from "./auth/authContext";
-import { authReducer } from "./auth/authReducer";
+import { Provider } from "react-redux";
 import { AppRouter } from "./routes/AppRouter";
+import { store } from "./store/store";
 
 
 export const CodersApp = () => { 
 
-    const [user, dispatch] = useReducer(authReducer, {});
-
     return (
-        <AuthContext.Provider value={{ user, dispatch }}>
+        <Provider store={store}>
             <AppRouter />
-        </AuthContext.Provider>
+        </Provider>
     )
 }
