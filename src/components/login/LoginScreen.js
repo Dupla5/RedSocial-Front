@@ -16,21 +16,7 @@ export const LoginScreen = () => {
 
 
     return (
-<<<<<<< HEAD
-        <form className="mt-4" onSubmit={handleSubmit}>
-            <div className="mb-3">
-                <label htmlFor="email" className="form-label" >Email</label>
-                <input type="email" className="form-control" name="email" autoComplete="off" onChange={handleInputChange}/>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="password" className="form-label">Password</label>
-                <input type="password" className="form-control" name="password" onChange={handleInputChange}/>
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
-=======
-
-        
+   
         <div className="d-md-flex half">
         <div className="contents">
           <div className="container">
@@ -82,6 +68,5 @@ export const LoginScreen = () => {
       </div>
       </div>
   
->>>>>>> FrontVersionGaby
     )
 }
