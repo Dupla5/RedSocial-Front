@@ -7,12 +7,20 @@ import { PublicScreens } from "./PublicScreens";
 
 export const AppRouter = () => {
 
+<<<<<<< HEAD
     const {Nombre} = useSelector(state => state.data)
+=======
+    const {id} = useSelector(state => state.auth)
+>>>>>>> FrontVersionGaby
 
     return (
         <BrowserRouter>
             <Routes>
+<<<<<<< HEAD
                 <Route path={`${Nombre}/*`} element={
+=======
+                <Route path={`${id}/*`} element={
+>>>>>>> FrontVersionGaby
                     <PrivateRoute>
                         <PrivateScreens />
                     </PrivateRoute>
