@@ -4,9 +4,6 @@ export const types = {
     logout: '[Auth] Logout',
     uiStartLoading: '[UI] Start Loading',
     uiFinishLoading: '[UI] Finish Loading',
-<<<<<<< HEAD
     loadData: '[Data] Load Data',
     removeData: '[Data] Remove Data',
-=======
->>>>>>> FrontVersionGaby
 }
