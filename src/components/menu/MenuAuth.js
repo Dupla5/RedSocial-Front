@@ -126,7 +126,7 @@ export const MenuAuth = () => {
 
             <MenuItem 
             onClick={handleMenuClose}>
-             <Link className="link" to="EditProfileScreen">Edit profile</Link>
+              <Link className="link" to="editProfile">Edit profile</Link>
              </MenuItem>
                         
             <MenuItem

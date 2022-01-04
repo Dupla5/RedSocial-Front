@@ -6,4 +6,6 @@ export const types = {
     uiFinishLoading: '[UI] Finish Loading',
     loadData: '[Data] Load Data',
     removeData: '[Data] Remove Data',
+    updateImg: '[editData] Update Img',
+    updateUser: '[editData] Update User' 
 }

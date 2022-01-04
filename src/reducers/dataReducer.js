@@ -8,6 +8,16 @@ export const dataReducer = (state = initialState, action) => {
             return {
                 ...action.payload
             }
+        case types.updateImg:
+            return {
+                ...state,
+                Img_Perfil: action.payload
+            }
+        case types.updateUser:
+            return {
+                ...state,
+                ...action.payload
+            }
         case types.removeData:
             return {
                 data: initialState
