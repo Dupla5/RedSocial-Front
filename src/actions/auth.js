@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2';
 import { getIdUser } from '../helpers/getIdUser';
 import { types } from "../types/types";
+import { courseData, removeCourses } from './courseData';
 import { removeData, startLoadData } from './data';
 import { finishLoading, startLoading } from "./ui";
 
@@ -12,6 +13,7 @@ export const startLoginEmailPassword =(email,password) =>{
         if(id!==undefined){
             dispatch(login(id));
             dispatch(startLoadData(id));
+            dispatch(courseData(id));
             dispatch(finishLoading());
             Swal.fire('Success', 'Bienvenido','success');
         }else{
@@ -22,8 +24,9 @@ export const startLoginEmailPassword =(email,password) =>{
 
 export const startLogout =()=>{
     return (dispatch)=>{
-        dispatch(logout());
         dispatch(removeData());
+        dispatch(removeCourses());
+        dispatch(logout());
         Swal.fire('Success', 'Hasta Luego','success');
     }
 };

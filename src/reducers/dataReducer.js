@@ -13,7 +13,7 @@ export const dataReducer = (state = initialState, action) => {
                 ...state,
                 Img_Perfil: action.payload
             }
-        case types.updateUser:
+        case types.updateData:
             return {
                 ...state,
                 ...action.payload

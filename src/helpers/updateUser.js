@@ -3,7 +3,6 @@ import axios from "axios";
 const URL = 'https://backend-dupla5.herokuapp.com/users/update-user';
 
 export const updateUser = async (dataUser) => {
-    console.log(dataUser, 'Datos de updateUser');
     const { Nombre, A_Paterno, A_Materno, Ciudad, Pais, Edad, Email, Pwd, Perfil_Linkedin, Img_Perfil,id_Usuario} = dataUser;
     const { data } = await axios.put(URL, { 
         nombre:Nombre,
@@ -18,5 +17,4 @@ export const updateUser = async (dataUser) => {
         url:Img_Perfil,
         idUsuario:id_Usuario
     });
-    console.log(data,'Datos de updateUser');
 }

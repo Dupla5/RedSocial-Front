@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import { fileUpload } from "../helpers/fileUpload";
 import { updateUser } from "../helpers/updateUser";
 import { types } from "../types/types";
-import { startLoadData } from "./data";
+
 
 export const startUpload = (file, data) => {
 
@@ -26,7 +26,7 @@ export const updateImg = (fileUrl) => {
     }
 }
 
-export const startUpdateUser = (data,id) => {
+export const startUpdateUser = (data) => {
     console.log(data, 'Datos de editData');
     return async (dispatch) => {
         Swal.fire({
@@ -36,8 +36,14 @@ export const startUpdateUser = (data,id) => {
         })
         const resp = await updateUser(data);
         console.log(resp);
-        dispatch(startLoadData(id));
         Swal.close();
+    }
+}
+
+export const updateData = (dataForm) => {
+    return {
+        type:types.updateData,
+        payload:dataForm
     }
 }
 

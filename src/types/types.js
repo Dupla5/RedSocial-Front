@@ -7,5 +7,15 @@ export const types = {
     loadData: '[Data] Load Data',
     removeData: '[Data] Remove Data',
     updateImg: '[editData] Update Img',
-    updateUser: '[editData] Update User' 
+    updateUser: '[editData] Update User',
+    updateData: '[editData] Update Data',
+    loadCourse: '[courseData] Load Courses',
+    addCourse: '[courseData] Add Course',
+    deleteCourse: '[courseData] Delete Course',
+    removeCourses: '[courseData] Remove Courses',
+    updateCourse: '[courseData] Update Course',
+    loadHobbie: '[courseData] Load Hobbie',
+    addHobbie: '[courseData] Add Hobbie',
+    removeHobbie: '[courseData] Remove Hobbie',
+    updateHobbie: '[courseData] Update Hobbie', 
 }
