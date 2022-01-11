@@ -2,20 +2,20 @@ import { types } from "../types/types";
 
 const initialState = [];
 
-export const courseReducer = (state = initialState, action) => {
+export const hobbieReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.addCourse:
+        case types.addHobbie:
             return [
                 ...state,
                 ...action.payload
             ]
-        case types.updateCourse:
+        case types.updateHobbie:
             return [...state, ...action.payload]
-        case types.loadCourse:
+        case types.loadHobbie:
             return [...state, ...action.payload]
-        case types.deleteCourse:
-            return [...state, ...state.filter((state) => state.id_Curso!==action.payload)]
-        case types.removeCourses:
+        case types.deleteHobbie:
+            return [...state, ...action.payload]
+        case types.removeHobbies:
             return initialState
         default:
             return state;

@@ -41,6 +41,7 @@ export const EditProfileScreen = () => {
     return (
         <div id="contentEdit">
             <h1>Edit Profile</h1>
+            <hr/>
             <div id="img">
                 <img className="editProfile__imgPerfil" src={Img_Perfil} alt="Perfil" />
                 <input id="fileSelector" type="file" name="file" style={{ display: "none" }} onChange={handleFileChange} />

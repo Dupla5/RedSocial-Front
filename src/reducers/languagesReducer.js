@@ -14,7 +14,7 @@ export const courseReducer = (state = initialState, action) => {
         case types.loadCourse:
             return [...state, ...action.payload]
         case types.deleteCourse:
-            return [...state, ...state.filter((state) => state.id_Curso!==action.payload)]
+            return [...state, ...action.payload]
         case types.removeCourses:
             return initialState
         default:

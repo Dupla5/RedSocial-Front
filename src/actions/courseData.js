@@ -15,6 +15,12 @@ export const loadCourse = (courseData) =>{
     }
 }
 
+export const deleteCourse = (key) =>{
+    return{
+        type:types.deleteCourse,
+        payload:key
+    }
+};
 
 export const removeCourses = () =>{
     return{
