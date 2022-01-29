@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+body {
+    min-height: 100vh
+}
+
+.wrapper {
+    max-width: 850px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    margin: 50px auto;
+    box-shadow: 0 8px 20px 0px #0d3563cb;
+    overflow: hidden
+  
+    
+}
+
+.wrapper .form{
+&-left {        
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 100px 20px;
+    position: relative;
+    width: 100%;
+    color: #fff
+    }
+
+&-right{
+    padding: 20px 20px;
+    position: relative;
+    width: 100%
+
+}
+
+}
+
+.wrapper .form-right {
+    h2 {
+    color: #3786bd;
+    font-size: 35px;
+    
+    &.label{
+        font-weight: 600;
+        font-size: 15px;
+        color: #666;
+        display: block;
+        margin-bottom: 8px
+    }
+}}
+
+
+.wrapper .register{
+    padding: 12px;
+background: #f0a00d;
+border-top-left-radius: 5px;
+border-bottom-right-radius: 5px;
+width: 130px;
+border: none;
+margin: 6px 0 50px 0px;
+cursor: pointer;
+color: #fff;
+font-weight: 700;
+font-size: 17px
+
+
+}
+
+.wrapper .register:hover {
+    background-color: #3785bde0
+}
+
+@media (max-width: 860.5px) {
+    .wrapper {
+        margin: 50px 5px
+    }
+}
+
+@media (max-width: 767.5px) {
+    .wrapper {
+        flex-direction: column;
+        margin: 30px 20px
+    }
+
+    .wrapper .form-left {
+        border-bottom-left-radius: 0px
+    }
+}
+
+@media (max-width: 575px) {
+    .wrapper {
+        margin: 30px 15px
+    }
+
+    .wrapper .form-left {
+        padding: 25px
+    }
+
+    .wrapper .form-right {
+        padding: 25px
+    }
+}

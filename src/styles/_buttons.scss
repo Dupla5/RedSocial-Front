@@ -1,0 +1,19 @@
+.btn-secondary {
+    background-image: $secondary-gradient;
+    background-color: transparent;
+    color: $text-color-dark;
+    
+  
+    &:active {
+      background: $secondary-gradient ;
+    }
+  
+    &:hover {
+      background: $secondary-gradient-alt;
+      color: $text-color-dark;
+    }
+  }
+  
+  .btn-lg{
+    padding: 15px 85px;
+  }

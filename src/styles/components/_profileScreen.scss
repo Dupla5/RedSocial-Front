@@ -1,0 +1,79 @@
+#contentProfile, #contentEdit{
+    margin-top:1rem;
+}
+
+#contentProfile{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .lateral_izquierda{
+        background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+        width:40%;
+        height:100%;
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+        .img_perfil{
+            img{
+                width:100%;
+            }
+        }
+        p{
+            color: #000;
+            margin-top:1rem;
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+    .seccion{
+        width:55%;
+        article{
+            border: 1px solid #3f87a6;
+            border-radius: 10px;
+            width:100%;
+            padding:0.5rem;
+            margin-bottom: 2rem;
+            ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content:space-between;
+                margin-right: 2rem;
+                li{
+                    list-style: none;
+                    color: #000;
+                    border: 1px solid #3f87a6;
+                    width: 45%;
+                    padding:0.5rem;
+                    margin: 0.5rem;
+                    p{
+                        color:#000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#contentEdit{
+    h1{
+        width:100%;
+    }
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 90%;
+    #img{
+        width:40%;
+        .editProfile__imgPerfil{
+            width: 80%;
+        }
+    }
+    #datos{
+        width:60%;
+    }
+}

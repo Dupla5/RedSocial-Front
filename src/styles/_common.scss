@@ -1,0 +1,130 @@
+
+  
+  ::selection {
+    background: lighten($color: $primary-color, $amount: 10);
+    color: $white;
+  }
+  
+  ol,
+  ul {
+    list-style-type: none;
+    margin: 0px;
+  }
+  
+  img {
+    vertical-align: middle;
+    border: 0;
+  }
+  
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: $primary-color;
+
+  }
+  
+  a,
+  button,
+  select {
+    cursor: pointer;
+    transition: .2s ease;
+  
+    &:focus {
+      outline: 0;
+    }
+  }
+  
+  
+  .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  
+    &-sm {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  
+    &-lg {
+      padding-top: 200px;
+      padding-bottom: 200px;
+  
+      @include mobile {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+    }
+  
+    &-title {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .bg-cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .bg-gray {
+    background: $gray;
+  }
+  
+  .text-color {
+    color: $text-color;
+  }
+  
+  
+  .black {
+    color: $black;
+  }
+  
+  
+  .mb-80 {
+    margin-bottom: 80px !important;
+  }
+  
+  .pb-100 {
+    padding-bottom: 100px !important;
+  }
+  
+  .translate-y-150 {
+    transform: translateY(150px);
+  
+    @include mobile {
+      transform: translateY(0);
+    }
+  }
+  
+  .left-right-animation {
+    animation: left_right 3s ease-in infinite alternate-reverse;
+  }
+  
+  @keyframes left_right {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-20px);
+    }
+  }
+  
+  .up-down-animation {
+    animation: up_down 3s ease-in infinite alternate-reverse;
+  }
+  
+  @keyframes up_down {
+    0% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .zindex-1{
+    z-index: 1;
+  }
